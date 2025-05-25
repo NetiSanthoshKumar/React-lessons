@@ -1,7 +1,7 @@
 import React from 'react'
 import{useState} from 'react'
 export default function App8() {
-    const [count,setCount] = useState(0);
+    const [count,setCount] = useState(10);
     const increment = () =>{
         setCount(count + 1);
     }; 
