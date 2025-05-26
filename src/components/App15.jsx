@@ -31,7 +31,7 @@ export default function App15() {
       <h2><strong>useRef hook - to create uncontrolled component</strong></h2>
 
       <div>
-        <input type="text" ref={nameRef} defaultValue="John" />
+        <input type="text" ref={nameRef} defaultValue="John" style={{border:"2px solid black"}} />
         <button onClick={handleNameSubmit}>Submit</button>
       </div>
 
