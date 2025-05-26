@@ -38,8 +38,8 @@ export default function App15() {
       <hr />
 
       <div>
-        <input type="text" ref={num1Ref} defaultValue="4" style={{ fontWeight: "bold", fontSize: "18px", marginRight: "10px", border: "2px solid black" }} />
-        <input type="text" ref={num2Ref} defaultValue="5" style={{ fontWeight: "bold", fontSize: "18px", marginRight: "10px", border: "2px solid black" }} />
+        <input type="number" ref={num1Ref} defaultValue="4" style={{ fontWeight: "bold", fontSize: "18px", marginRight: "10px", border: "2px solid black" }} />
+        <input type="number" ref={num2Ref} defaultValue="5" style={{ fontWeight: "bold", fontSize: "18px", marginRight: "10px", border: "2px solid black" }} />
         <button onClick={handleSumSubmit} style={{ fontWeight: "bold", border: "2px solid black" }}>Submit</button>
         {sum && (
           <div style={{ fontSize: "24px", fontWeight: "bold", marginTop: "10px" }}>{sum}</div>
