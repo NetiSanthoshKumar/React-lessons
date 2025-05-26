@@ -8,7 +8,7 @@ export default function App13() {
   const [result3, setResult3] = useState(0);
   const [result4, setResult4] = useState(0);
   useEffect(() => {
-    setResult1(100 + num);
+    setResult1(100 +Number(num));
     setResult2(100 - num);
     setResult3(100 * num);
     setResult4(100 / num);
