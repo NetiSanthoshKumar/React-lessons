@@ -21,7 +21,7 @@ export default function App13() {
         <div className="App13-Row">
           <div>
             <h4>Addition</h4>
-            100+{num}={result1}
+            100+{Number(num)}={result1}
           </div>
           <div>
             <h4>Subtraction</h4>
