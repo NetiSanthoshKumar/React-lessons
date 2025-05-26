@@ -10,7 +10,7 @@ export default function App14() {
     const url = "https://jsonplaceholder.typicode.com/users";
     const res = await axios(url);
     setUsers(res.data);
-    setFilteredUsers(res.data); // show all initially
+    setFilteredUsers(res.data);
   };
 
   useEffect(() => {
@@ -27,11 +27,11 @@ export default function App14() {
   const handleInputChange = (e) => {
     const text = e.target.value;
     setSearch(text);
-    handleFilter(text); // live filtering as user types
+    handleFilter(text);
   };
 
   const handleSearchClick = () => {
-    handleFilter(search); // search when button is clicked
+    handleFilter(search);
   };
 
   return (
