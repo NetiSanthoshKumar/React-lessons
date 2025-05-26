@@ -10,30 +10,40 @@ export default function App14() {
     const url = "https://jsonplaceholder.typicode.com/users";
     const res = await axios(url);
     setUsers(res.data);
-    setFilteredUsers(res.data);
+    setFilteredUsers(res.data); // show all initially
   };
 
   useEffect(() => {
     fetchData();
   }, []);
 
-  const handleSearchClick = () => {
+  const handleFilter = (text) => {
     const filtered = users.filter((user) =>
-      user.name.toLowerCase().includes(search.toLowerCase())
+      user.name.toLowerCase().includes(text.toLowerCase())
     );
     setFilteredUsers(filtered);
+  };
+
+  const handleInputChange = (e) => {
+    const text = e.target.value;
+    setSearch(text);
+    handleFilter(text); // live filtering as user types
+  };
+
+  const handleSearchClick = () => {
+    handleFilter(search); // search when button is clicked
   };
 
   return (
     <div>
       <h1>App14</h1>
-      <h2>useEffect hook to fetch API with Search Button</h2>
+      <h2>Live Search + Button Filter</h2>
       <p>
         <input
           type="text"
           placeholder="Search by name"
           value={search}
-          onChange={(e) => setSearch(e.target.value)}
+          onChange={handleInputChange}
         />
         <button onClick={handleSearchClick}>Search</button>
       </p>
