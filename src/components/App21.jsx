@@ -18,7 +18,7 @@ const Register = () => {
 
   return (
     <div style={{ border: '1px solid black', padding: '10px', marginBottom: '20px' }}>
-      <h2>Register.jsx</h2>
+      <h2>Register</h2>
       <input placeholder="Name" onChange={(e) => setName(e.target.value)} /><br />
       <input placeholder="Email" onChange={(e) => setEmail(e.target.value)} /><br />
       <input placeholder="Password" onChange={(e) => setPassword(e.target.value)} /><br />
@@ -45,7 +45,7 @@ const Login = () => {
 
   return (
     <div style={{ border: '1px solid black', padding: '10px' }}>
-      <h2>Login.jsx</h2>
+      <h2>Login</h2>
       <input placeholder="Email" onChange={(e) => setEmail(e.target.value)} /><br />
       <input placeholder="Password" onChange={(e) => setPassword(e.target.value)} /><br />
       <button onClick={handleLogin}>Submit</button>
